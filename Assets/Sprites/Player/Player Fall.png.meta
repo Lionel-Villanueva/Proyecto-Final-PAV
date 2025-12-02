@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: c1538e683bad805449ce76033dc4897b
+guid: 76cf0c660be4e814690d6ee9ca5b06cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8810041939755343179
-    second: Player Run_0
-  - first:
-      213: -8574335567818500322
-    second: Player Run_1
-  - first:
-      213: -3534871338169529028
-    second: Player Run_2
+      213: 2969029163108191901
+    second: Player Fall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Run_0
+      name: Player Fall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4d1963777e834a70800000000000000
-      internalID: 8810041939755343179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Run_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.4650175, y: 0.4533566}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e175e27da37d10980800000000000000
-      internalID: -8574335567818500322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Run_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.4650175, y: 0.4533566}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3d02b91f3d91fec0800000000000000
-      internalID: -3534871338169529028
+      spriteID: d9ec6d21b4c143920800000000000000
+      internalID: 2969029163108191901
       vertices: []
       indices: 
       edges: []
@@ -175,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fb43a2032597b584695930f2d5622c06
+    spriteID: bc9dee57d7428f847aac0cce663a0949
     internalID: 0
     vertices: []
     indices: 
@@ -185,11 +135,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.46501749753952029,"y":0.4533565938472748},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.46501749753952029,"y":0.4533565938472748},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Player Run_0: 8810041939755343179
-      Player Run_1: -8574335567818500322
-      Player Run_2: -3534871338169529028
+      Player Fall_0: 2969029163108191901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

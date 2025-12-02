@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    /*
     public float speed = 6f;
     public float jumpForce = 12f;
 
@@ -36,7 +37,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+
         animator.SetFloat("Movement", Mathf.Abs(horizontal));
+
         if (rb.linearVelocity.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -58,5 +61,5 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
-    
+    */
 }
