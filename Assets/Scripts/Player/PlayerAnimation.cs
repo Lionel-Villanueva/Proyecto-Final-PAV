@@ -1,7 +1,4 @@
-using System;
-using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -10,8 +7,6 @@ public class PlayerAnimation : MonoBehaviour
 {
     public Animator controller;
     public SpriteRenderer sprite;
-
-
     public bool IsMoving;
 
     private void Awake()
@@ -27,7 +22,7 @@ public class PlayerAnimation : MonoBehaviour
         PlayerControllers.Instance.InputManager.OnJumpPerformed += SetJumpAnimation;
     }
     
-    private void SetJumpAnimation()
+    private void SetJumpAnimation(bool value)
     {
         controller.SetTrigger("OnJump");
         print("Jump");
@@ -35,7 +30,9 @@ public class PlayerAnimation : MonoBehaviour
 
     private void SetMoveAnimation(Vector2 vector)
     {
-        print(vector);
+        if (vector.x == 0)
+            return;
+         
         if (vector.x != 0)
             controller.SetBool("IsMoving", true);
         else
@@ -46,12 +43,8 @@ public class PlayerAnimation : MonoBehaviour
         else
             sprite.flipX = false;
 
-
-        sprite.flipX = vector.x >= 0? true: false;
     }
-
-    void Update()
+    private void Dead()
     {
-
     }
 }

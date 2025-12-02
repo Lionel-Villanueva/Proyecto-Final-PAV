@@ -1,19 +1,18 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class PlayerInputs : MonoBehaviour
 {
-    public InputSystem_Actions inputs;
+    public MainInput inputs;
     public Action<Vector2> OnMoveChange;
-    public Action OnJumpPerformed;
+    public Action<bool> OnJumpPerformed;
 
     private Vector2 moveInput;
 
     private void Awake()
     {
-        inputs = new();
+        inputs = new MainInput();
     }
     private void OnEnable()
     {
@@ -22,13 +21,24 @@ public class PlayerInputs : MonoBehaviour
         inputs.Player.Move.performed += OnMove;
         inputs.Player.Move.canceled += OnMove;
 
+        inputs.Player.Jump.started += OnJump;
         inputs.Player.Jump.performed += OnJump;
-
+        inputs.Player.Jump.canceled += OnJump;
     }
+    private void OnDisable()
+    {
+        inputs.Disable();
+        inputs.Player.Move.started -= OnMove;
+        inputs.Player.Move.performed -= OnMove;
+        inputs.Player.Move.canceled -= OnMove;
 
+        inputs.Player.Jump.started -= OnJump;
+        inputs.Player.Jump.performed -= OnJump;
+        inputs.Player.Jump.canceled -= OnJump;
+    }
     private void OnJump(InputAction.CallbackContext context)
     {
-        OnJumpPerformed?.Invoke();
+        OnJumpPerformed?.Invoke(context.performed);
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -36,14 +46,7 @@ public class PlayerInputs : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
         OnMoveChange?.Invoke(moveInput);
     }
-    private void OnDisable()
-    {
-        inputs.Disable();
-    }
-    void Start()
-    {
-        
-    }
+
 
     public Vector2 Moveinputs => moveInput;
 }
